@@ -1,0 +1,221 @@
+<html>
+  <head>
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
+   	
+  </head>
+  <body>
+     <!-- Add the HTML <div> element for Diagram  -->
+      <div id="diagram"></div> 
+	  
+	  
+	  
+	  
+	  <script>
+	  
+	  
+	  
+var data = [
+    { 'id': 'parent', 'role': 'Negd Team', 'color': '#11080E' },
+    { 'id': '1', 'role': 'Shri Abhishek Singh, IAS \n President & Chief Executive Officer \n ceo@digitalindia.gov.in \n 011-24303701', 'manager': 'parent', 'color': '#756570' },
+    { 'id': '2', 'role': 'PRESIDENT & CEO OFFICE', 'manager': '1', 'color': '#11080E' },
+    { 'id': '3', 'role': 'COO/DIRECTORS', 'manager': '18', 'color': '#11080E' },
+    { 'id': '4', 'role': 'PROGRAMME MANAGEMENT', 'manager': '18', 'color': '#11080E' }, 
+    { 'id': '5', 'role': 'UMANG', 'manager': '18', 'color': '#11080E' },
+    { 'id': '6', 'role': 'DIGILOCKER & OPENFORGE', 'manager': '18', 'color': '#11080E' },
+    { 'id': '7', 'role': 'NATIONAL CENTRE OF GEO-INFORMATICS', 'manager': '18', 'color': '#11080E' },
+    { 'id': '8', 'role': 'RAPID ASSESSMENT SYSTEM', 'manager': '18', 'color': '#11080E' },
+    { 'id': '9', 'role': 'PROGRAMME MANAGEMENT INFORMATION SYSTEM', 'manager': '18', 'color': '#11080E' },
+    { 'id': '10', 'role': 'CAPACITY BUILDING', 'manager': '19', 'color': '#11080E' },
+    { 'id': '11', 'role': 'AWARENESS & COMMUNICATION', 'manager': '19', 'color': '#11080E' },
+    { 'id': '12', 'role': 'FINANCE', 'manager': '19', 'color': '#11080E' },
+    { 'id': '13', 'role': 'HUMAN RESOURCES', 'manager': '19', 'color': '#11080E' },
+    { 'id': '14', 'role': 'ADMINISTRATION', 'manager': '19', 'color': '#11080E' },
+    { 'id': '15', 'role': 'MINISTRY E- GOVERNANCE SUPPORT TEAM', 'manager': '19', 'color': '#11080E' },
+    { 'id': '16', 'role': 'IT SUPPORT TEAM', 'manager': '19', 'color': '#11080E' },
+    { 'id': '17', 'role': 'EXECUTIVES AND SUPPORT STAFF', 'manager': '19', 'color': '#11080E' },
+    { 'id': '18', 'role': 'Prasanna Kumar Parida \n Executive Secretary	\nprasanna.parida@digitalindia.gov.in\n011-24303701', 'manager': '2', 'color': '#756570' },
+    { 'id': '19', 'role': 'Chandan Singh \n Executive Secretary	\nchandan@digitalindia.gov.in\n011-24303701', 'manager': '2', 'color': '#756570' },
+    { 'id': '20', 'role': 'Vinay Thakur	\nChief Operating Officer\nvinay@digitalindia.gov.in\n011-24303700', 'manager': '3', 'color': '#756570' },
+    { 'id': '21', 'role': 'Neeraj Kumar	\nDirector - Project Appraisal & \nFinance and Projects (UMANG and RAS)\n	neeraj@digitalindia.gov.in\n011-24303703', 'manager': '3', 'color': '#756570' },
+    { 'id': '22', 'role': 'Debabrata Nayak\nAddl. Director - DigiLocker	\nd.nayak@digitalindia.gov.in\n011-24303709', 'manager': '3', 'color': '#756570' },
+    { 'id': '23', 'role': 'Bramhanand Jha\nSenior Consultant\nbramhanand.jha@digitalindia.gov.in\n011-24303711', 'manager': '4', 'color': '#756570' },
+    { 'id': '24', 'role': 'Tushar Rai	\nSenior Consultant	\ntushar@digitalindia.gov.in\n 011-24303759', 'manager': '4', 'color': '#756570' },
+    { 'id': '25', 'role': 'Reshma Agarwal	\nConsultant	\nreshma.agarwal@digitalindia.gov.in', 'manager': '4', 'color': '#756570' },
+    { 'id': '26', 'role': 'Ajeet Kumar	\nConsultant	\najit.vishen@digitalindia.gov.in\n 011-24303713', 'manager': '4', 'color': '#756570' },
+    { 'id': '27', 'role': 'Anil Agarwal	\nPrincipal Consultant & Head - UMANG\n anil.agarwal@digitalindia.gov.in\n 011-24303782', 'manager': '5', 'color': '#756570' },
+    { 'id': '28', 'role': 'Amit Kumar	\nSenior Consultant	\n amitkr@digitalindia.gov.in\n 011-24303704', 'manager': '5', 'color': '#756570' },
+    { 'id': '29', 'role': 'Pankaj Kumar Srivastava	\nSenior Consultant	\npankaj.sri@digitalindia.gov.in\n 011-24303756', 'manager': '5', 'color': '#756570' },
+    { 'id': '30', 'role': 'Sanjay Varyani	\nSenior Consultant	\nsanjayvaryani@digitalindia.gov.in\n	011-24303704', 'manager': '5', 'color': '#756570' },
+    { 'id': '31', 'role': 'Vikas Sheel Gupta \nConsultant \nvikas.gupta@digitalindia.gov.in\n	011-24303756', 'manager': '5', 'color': '#756570' },
+    { 'id': '32', 'role': 'Kriti Gupta	\nTester	\nkriti.gupta.k@digitalindia.gov.in \n 011-24303722', 'manager': '5', 'color': '#756570' },
+    { 'id': '33', 'role': 'Shipra Saxena	\nTester	\nshipra.saxena@digitalindia.gov.in\n 011-24303718', 'manager': '5', 'color': '#756570' },
+    { 'id': '34', 'role': 'Amit Jain \nSenior Consultant	\namitjain@digitalindia.gov.in\n	011-24303761', 'manager': '6', 'color': '#756570' },
+    { 'id': '35', 'role': 'Amit Savant	\nSenior Consultant	\namitsavant@digitalindia.gov.in\n	011-24303735', 'manager': '6', 'color': '#756570' },
+    { 'id': '36', 'role': 'Amit Ranjan	\nLead Product Architect	\namitranjan@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '37', 'role': 'Durga Prasad Dash\n	Senior Consultant	\ndurga@digitalindia.gov.in\n	011-24303758', 'manager': '6', 'color': '#756570' },
+    { 'id': '38', 'role': 'Arvind Rai	\nConsultant	\narvind@digitalindia.gov.in\n	011-24303770', 'manager': '6', 'color': '#756570' },
+    { 'id': '39', 'role': 'Ajoy Agarwal	\nConsultant	\najoy@digitalindia.gov.in\n	011-24303752', 'manager': '6', 'color': '#756570' },
+    { 'id': '40', 'role': 'Prasoon Kumar	\nConsultant	\nprasoon.k@digitalindia.gov.in\n	011-24303735', 'manager': '6', 'color': '#756570' },
+    { 'id': '41', 'role': 'Nirmit Mehrotra	\nSenior Business Analyst	\nnirmit.mehrotra@digitalindia.gov.in	\n011-24303758', 'manager': '6', 'color': '#756570' },
+    { 'id': '42', 'role': 'Anand Kumar	\nWeb Application Developer	\nanand@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '43', 'role': 'Abhishek Kumar	\nSystem Administrator	\nabhishekkr@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '44', 'role': 'Ankur Shukla	\nWeb Designer	\nankur.s@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '45', 'role': 'Ashish Ranjan	\nDeveloper (PHP / PYTHON)	\nashish.ranjan@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '46', 'role': 'Ajit Kumar	\nWeb Application Developer	\najit.kumar@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '47', 'role': 'Akshay Kumar Ray\n Functional Tester	\nakshay.ray@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '48', 'role': 'Alok Ranjan	\nWeb Application Developer \nalok.ranjan@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '49', 'role': 'Amit Ranjan	\nPHP Developer	\nranjan@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '50', 'role': 'Durgesh Kumar Singh\nWeb UX Designer\ndurgesh.singh@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '51', 'role': 'Kuldeep Dwivedi	\nAndroid Developer	\nkuldeep.dwivedi@digitalindia.gov.in\n011-24303739', 'manager': '6', 'color': '#756570' },
+    { 'id': '52', 'role': 'Moorchhana Pattanaik	\nWed Application Developer	\nmoorchhana@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '53', 'role': 'Neha Tuli	\nSoftware Developer \nneha.tuli@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '54', 'role': 'Priyank Khare \nIT Analyst \npriyank.khare@digitalindia.gov.in\n 011-24303744', 'manager': '6', 'color': '#756570' },
+    { 'id': '55', 'role': 'Raushan Kumar Singh \nSystem Administrator \nraushan@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '56', 'role': 'Sanchita Bajaj \nIT Analyst	\nsanchita@digitalindia.gov.in\n	011-24303770', 'manager': '6', 'color': '#756570' },
+    { 'id': '57', 'role': 'Srishti Srivastava \nWeb Application Developer \nsrishti@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '58', 'role': 'Suman Prasad	\nUX Designer \nsuman@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '59', 'role': 'Sunil Kumar Mahato \nWeb Application Developer \nsunilkm@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '60', 'role': 'Sanjib Mitra	\nBusiness Analyst	\nsanjibmitra@digitalindia.gov.in\n	011-24303761', 'manager': '6', 'color': '#756570' },
+    { 'id': '61', 'role': 'Naveen Chauhan	\nIOS Develper	\nnaveen.chauhan@digitalindia.gov.in\n 011-24303741', 'manager': '6', 'color': '#756570' },
+    { 'id': '62', 'role': 'Sandeep Kumawat	\nBackend Developer	\ns.kumawat@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '63', 'role': 'Thakurdas Rautaray \nBackend Developer \nrthakurdas@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '64', 'role': 'Jitendra Kumar \nSoftware Developer \njitendra@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '65', 'role': 'Rajiv Ranjan Ojha \nWeb Application Developer \nrajivojha@digitalindia.gov.in\n 011-24303761', 'manager': '6', 'color': '#756570' },
+    { 'id': '66', 'role': 'Indresh Singh Bhadoria\nWeb Application Developer\nindresh@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '67', 'role': 'Saurabh Kumar Pandey\nWeb Application Developer\nsaurabh@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '68', 'role': 'Govind Sharma \nTest Engineer \ngovind.sharma10@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '69', 'role': 'Swati Goyal \nOnboarding Support \nswati.goyal23@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '70', 'role': 'Anjali Kumari \nHelp Desk \nanjalikumari@digitalindia.gov.in', 'manager': '6', 'color': '#756570' },
+    { 'id': '71', 'role': 'Rajeev\nConsultant \n 011- 24303715', 'manager': '6', 'color': '#756570' },
+    { 'id': '72', 'role': 'Karan\nConsultant \n 011- 24303728', 'manager': '6', 'color': '#756570' },
+    { 'id': '73', 'role': 'Anoop Kumar	\nConsultant \nanoop.kumar13@digitalindia.gov.in\n 011-24303711', 'manager': '6', 'color': '#756570' },
+    { 'id': '74', 'role': 'Tushar Rai \nSenior Consultant \ntushar@digitalindia.gov.in\n	011-24303759', 'manager': '7', 'color': '#756570' },
+    { 'id': '75', 'role': 'Shiv Gupta \nManager \nshiv.gupta@digitalindia.gov.in \n011-24303759', 'manager': '7', 'color': '#756570' },
+    { 'id': '76', 'role': 'Sheena Bhalaik \nAssistant Manager \nsheena.b@digitalindia.gov.in\n 011-24303737', 'manager': '7', 'color': '#756570' },
+    { 'id': '77', 'role': 'Amit Ranjan \nPHP Developer	\nranjan@digitalindia.gov.in', 'manager': '7', 'color': '#756570' },
+    { 'id': '78', 'role': 'Ankur Shukla	\nWeb Designer	\nankur.s@digitalindia.gov.in', 'manager': '7', 'color': '#756570' },
+    { 'id': '79', 'role': 'Karan Gupta	\nDatabase Manager	\ngupta.karan@digitalindia.gov.in', 'manager': '7', 'color': '#756570' },
+    { 'id': '80', 'role': 'Vikas Kumar Choubey\nMobile Developer \nvikaschoubey@digitalindia.gov.in\n	011-24303781', 'manager': '7', 'color': '#756570' },
+    { 'id': '81', 'role': 'Sudhanshu Srivastava	\nSoftware Developer \nsudhanshu@digitalindia.gov.in\n 011-24303780', 'manager': '7', 'color': '#756570' },
+    { 'id': '82', 'role': 'Md Sharfuddin Ansari \nSoftware Developer \nsharfuddin@digitalindia.gov.in\n 011-24303775', 'manager': '7', 'color': '#756570' },
+    { 'id': '83', 'role': 'Rupali Rawat	\nGIS Expert	\nroopali.rawat@digitalindia.gov.in\n 011-24303783', 'manager': '7', 'color': '#756570' },
+    { 'id': '84', 'role': 'Priyanka Ojha \nSoftware Developer \npriyankaojha@digital.gov.in\n 011-24303775', 'manager': '7', 'color': '#756570' },
+    { 'id': '85', 'role': 'Vineet Kumar Singh\nQA / Testing Expert \nvineet.singh@digitalindia.gov.in\n 011-24303781', 'manager': '7', 'color': '#756570' },
+    { 'id': '86', 'role': 'Rupesh Kumar	\nSystem Admin	\nrupesh.kumar@digitalindia.gov.in', 'manager': '7', 'color': '#756570' },
+    { 'id': '87', 'role': 'Sahil Monga	\nConsultant\nsahil.monga@digitalindia.gov.in\n 011-24303718', 'manager': '7', 'color': '#756570' },
+    { 'id': '88', 'role': 'Amit	Software \nDeveloper \namit.bansal2211@digitalindia.gov.in', 'manager': '7', 'color': '#756570' },
+    { 'id': '89', 'role': 'Aarti Jha \n 	011-24303741', 'manager': '7', 'color': '#756570' },
+    { 'id': '90', 'role': 'Sanjay Singh \nsanjay.singh217@digitalindia.gov.in\n	+91-8802030364', 'manager': '7', 'color': '#756570' },
+    { 'id': '91', 'role': 'Akancha Singh \nWeb Designer	\nAkancha.singh@digitalindia.gov.in\n	+91-8510047373', 'manager': '7', 'color': '#756570' },
+    { 'id': '92', 'role': 'Rashmi Agarwal	\nSoftware Developer	\nrashmi.agrawal@digitalindia.gov.in\n	+91-9769496511', 'manager': '7', 'color': '#756570' },
+    { 'id': '93', 'role': 'Neelu Chaudhary	\nAssistant Manager	\nneelu.chaudhary@digitalindia.gov.in\n	+91-7838659562', 'manager': '7', 'color': '#756570' },
+    { 'id': '94', 'role': 'Rajesh Loona	\nSenior Consultant	\nrajesh.loona@igitalindia.gov.in\n	011-24303713', 'manager': '8', 'color': '#756570' },
+    { 'id': '95', 'role': 'Apoorva Joshi	\nDatabase Developer	\napoorva.joshi@digitalindia.gov.in\n	011-24303719', 'manager': '8', 'color': '#756570' },
+    { 'id': '96', 'role': 'Saahil Chadha	\nPHP Developer	\nsaahil.chadha@digitalindia.gov.in\n	011-24303718', 'manager': '8', 'color': '#756570' },
+    { 'id': '97', 'role': 'Vikash Kumar	\nPHP Developer	\nvikash.kumar@digitalindia.gov.in', 'manager': '8', 'color': '#756570' },
+    { 'id': '98', 'role': 'Manisha Agarwal \nWeb Designer & Developer	\nmanisha@digitalindia.gov.in', 'manager': '8', 'color': '#756570' },
+    { 'id': '99', 'role': 'Reshma Agarwal	\nConsultant \nreshma.agarwal@digitalindia.gov.in', 'manager': '9', 'color': '#756570' },
+    { 'id': '100', 'role': 'Sugandha Kapoor	\nSoftware Developer \nsugandha@digitalindia.gov.in\n	011-24303780', 'manager': '9', 'color': '#756570' },
+    { 'id': '101', 'role': 'Deepak Kumar \nUI/ UX Designer \ndeepak.bemaad@digitalindia.gov.in\n	011-24303781', 'manager': '9', 'color': '#756570' },
+    { 'id': '102', 'role': 'Anusha Gupta \nSoftware Engineer \nanusha.gupta@digitalindia.gov.in\n	011-24303774', 'manager': '9', 'color': '#756570' },
+    { 'id': '103', 'role': 'Rajeev Kumar \nPHP Developer \nrajeev.kumar@digitalindia.gov.in\n	011-24303775', 'manager': '9', 'color': '#756570' },
+    { 'id': '104', 'role': 'Raghvender Singh \nSoftware Developer \nraghvender.singh7@digitalindia.gov.in\n	011-24303774', 'manager': '9', 'color': '#756570' },
+    { 'id': '105', 'role': 'Dhara \nSoftware Developer \ndhara.sd03@nic.in\n	011-24303780', 'manager': '9', 'color': '#756570' },
+    { 'id': '106', 'role': 'Chandra Mohan Dubey\n Software Developer \nchander@digitalindia.gov.in\n	011-24303783', 'manager': '9', 'color': '#756570' },
+    { 'id': '107', 'role': 'Ramu Kumar\n Data Entry Operator to Dir.\n(Projects) \nramu.k@digitalindia.gov.in\n 011-24303750', 'manager': '9', 'color': '#756570' },
+    { 'id': '108', 'role': 'Kamal Jain\n Senior General Manager	\nkamal.jain@digitalindia.gov.in\n 011-24303702', 'manager': '10', 'color': '#756570' },
+    { 'id': '109', 'role': 'Shilohu Rao \nNJP General Manager - \nCapacity Building/ RTI/ \nPublic Grievance Cell	\nshilohu.digitalindia.gov.in\n	011- 24303787', 'manager': '10', 'color': '#756570' },
+    { 'id': '110', 'role': 'Ruchee Arora \nConsultant \nruchee.arora@digitalindia.gov.in\n 011-24303751', 'manager': '10', 'color': '#756570' },
+    { 'id': '111', 'role': 'Pooja Kandpal Singh \nConsultant \npooja.kandpal@digitalindia.gov.in\n 011-24303757', 'manager': '10', 'color': '#756570' },
+    { 'id': '112', 'role': 'Vinay Singh	\nConsultant \nvinay.singh@digitalindia.gov.in\n 011-24303784', 'manager': '10', 'color': '#756570' },
+    { 'id': '113', 'role': 'Mohd. Firoj	\nManager - KMS/ RTI /\n Public Grievance	\nfiroz@digitalindia.gov.in\n	011-24303785', 'manager': '10', 'color': '#756570' },
+    { 'id': '114', 'role': 'Bhumika Suri \ne-Learning Specialist \nbhumika.suri@digitalindia.gov.in\n	011-24303786', 'manager': '10', 'color': '#756570' },
+    { 'id': '115', 'role': 'Vimal Sharma \nConsultant - LMS	\nvimal.sharma@digitalindia.gov.in\n	011-24303785', 'manager': '10', 'color': '#756570' },
+    { 'id': '116', 'role': 'Barnali Mukherjee	\nLead Consultant	\nbarnali@digitalindia.gov.in\n 011-24303753', 'manager': '11', 'color': '#756570' },
+    { 'id': '117', 'role': 'Pranjal Jyoti Kalita \nConsultant Specialist \npranjal.kalita@digitalindia.gov.in \n011-24303729', 'manager': '11', 'color': '#756570' },
+    { 'id': '118', 'role': 'Shailendra Saxena \nDeputy General Manager \nshailsaxena@digitalindia.gov.in\n 011-24303727', 'manager': '11', 'color': '#756570' },
+    { 'id': '119', 'role': 'Priyanka Monga	\nConsultant \npriyanka.monga@digitalindia.gov.in\n 011-24303726', 'manager': '11', 'color': '#756570' },
+    { 'id': '120', 'role': 'Anuj Kaushal	\nManager	\nanuj@digitalindia.gov.in\n	011-24303730', 'manager': '11', 'color': '#756570' },
+    { 'id': '121', 'role': 'Payel Bhattacharjee \nConsultant 	\npayel@digitalindia.gov.in\n	011-24303753', 'manager': '11', 'color': '#756570' },
+    { 'id': '122', 'role': 'Zaara Qamar \nConsultant	\nzaara.qamar@digitalindia.gov.in\n	9910085359', 'manager': '11', 'color': '#756570' },
+    { 'id': '123', 'role': 'Charu Sharma \nAssistant Manager	\ncharu.sharma@digitalindia.gov.in\n 011-24303757', 'manager': '11', 'color': '#756570' },
+    { 'id': '124', 'role': 'Kanwarjot Singh \nManager	\nkanwarjot@digitalindia.gov.in\n 011-24303750', 'manager': '11', 'color': '#756570' },
+    { 'id': '125', 'role': 'Vibhash Kumar \nDeveloper	\nvibhash.kumar.di@digitalindia.gov.in\n	011-24303717', 'manager': '11', 'color': '#756570' },
+    { 'id': '126', 'role': 'Suraj Arora	\nSr Graphic Designer	\nsuraj@digitalindia.gov.in\n	011-24303749', 'manager': '11', 'color': '#756570' },
+    { 'id': '127', 'role': 'Neha Anjali	\nGraphic Designer	\nneha.anjali@digitalindia.gov.in', 'manager': '11', 'color': '#756570' },
+    { 'id': '128', 'role': 'G R Sharma	\nSenior General Manager\ngrsharma@digitalindia.gov.in\n	011-2430370', 'manager': '12', 'color': '#756570' },
+    { 'id': '129', 'role': 'G. N. Kalia \nGeneral Manager	\ngn.kalia@digitalindia.gov.in,\ngn.kalia@nic.in\n 011-24303755', 'manager': '12', 'color': '#756570' },
+    { 'id': '130', 'role': 'Jagmohan Dhoundiyal \nConsultant \njagmohan.dh@digitalindia.gov.in\n 011-24303731', 'manager': '12', 'color': '#756570' },
+    { 'id': '131', 'role': 'Ranjan Kumar \nConsultant \nranjank@digitalindia.gov.in\n 011-24303734', 'manager': '12', 'color': '#756570' },
+    { 'id': '132', 'role': 'R.A. Dhawan \nSenior General Manager \n(Admin & HR) \nr.dhawan@digitalindia.gov.in,\nr.dhawan@meity.gov.in\n	011-24303707', 'manager': '13', 'color': '#756570' },
+    { 'id': '133', 'role': 'Manoj Bhagat \nSenior Consultant \nmanojbhagat@digitalindia.gov.in\n 011-24303752', 'manager': '13', 'color': '#756570' },
+    { 'id': '134', 'role': 'Sagorika Shau	\nConsultant \nsagorika.shau@digitalindia.gov.in\n 011-24303740', 'manager': '13', 'color': '#756570' },
+    { 'id': '135', 'role': 'R.A. Dhawan \nSenior General Manager\n (Admin & HR) \nr.dhawan@digitalindia.gov.in,\n r.dhawan@meity.gov.in\n	011-24303707', 'manager': '14', 'color': '#756570' },
+    { 'id': '136', 'role': 'Chittaranjan Sawaijam \nConsultant \nchittaranjan@digitalindia.gov.in\n 9999278684', 'manager': '15', 'color': '#756570' },
+    { 'id': '137', 'role': 'Priya Sharma \nConsultant	\npriya.sharma@digitalindia.gov.in	', 'manager': '15', 'color': '#756570' },
+    { 'id': '138', 'role': 'Jai Rohilla	\nConsultant	\nsatya@digitalindia.gov.in\n 011-24303751', 'manager': '16', 'color': '#756570' },
+    { 'id': '139', 'role': 'Amit Kumar	\nAdministrator	\namit.negd@gmail.com\n	011-24303737', 'manager': '16', 'color': '#756570' },
+    { 'id': '140', 'role': 'Anita Sharma \nSenior EA to Senior General Manager\n(Capacity Building, Finance & HR)\nanitasharma@digitalindia.gov.in\n	011-24303702', 'manager': '17', 'color': '#756570' },
+    { 'id': '141', 'role': 'Kusum Rawat	\nSenior EA to Addl Director\n (DigiLocker)	\nkusum@digitalindia.gov.in\n	011-24303709', 'manager': '17', 'color': '#756570' },
+    { 'id': '142', 'role': 'Anu Sharma	\nSenior Executive to \nSr General Manager\n (HR & Admin)	\nanu.sharma@digitalindia.gov.in	\n011-24303707', 'manager': '17', 'color': '#756570' },
+    { 'id': '143', 'role': 'Brijesh Singh \nSenior Executive Assistant\n(Support to Ministry)	\nbrijesh.singh@digitalindia.gov.in\n	011-30481639', 'manager': '17', 'color': '#756570' },
+    { 'id': '144', 'role': 'Meena Jawa	\nExecutive Secretary to Dir\n (Finance) \nmeenajawa@digitalindia.gov.in\n	011-24303703/\n 011- 24303716', 'manager': '17', 'color': '#756570' },
+    { 'id': '145', 'role': 'Dharmender Kumar \nSenior Executive Assistant\n (Admin) \ndharmender@digitalindia.gov.in\n	011-24303725', 'manager': '17', 'color': '#756570' },
+    { 'id': '146', 'role': 'RupKumar Sheet	\nExecutive Assistant to Dir\n (Projects) \nrupkumar@digitalindia.gov.in\n	011-24303700', 'manager': '17', 'color': '#756570' },
+    { 'id': '147', 'role': 'Avinash Kaur	\nExecutive Assistant (HR)\nanvinash.kaur@digitalindia.gov.in\n	011-24303740', 'manager': '17', 'color': '#756570' },
+    { 'id': '148', 'role': 'Sameer K Joshi	\nAssistant Manager (Admin)\nsameerk.joshi@digitalindia.gov.in\n 011-24303777', 'manager': '17', 'color': '#756570' },
+    { 'id': '149', 'role': 'Sumit Sharma	\nAssistant Manager (Admin)\nsumitk.sharma@digitalindia.gov.in\n 011-24303777', 'manager': '17', 'color': '#756570' },
+    { 'id': '150', 'role': 'Deepak Mishra \nOffice Assistant (Admin)\ndeepak.mishra@digitalindia.gov.in\n 011-24303777', 'manager': '17', 'color': '#756570' },
+    { 'id': '151', 'role': 'Ravi Jaiswal	\nNetwork Administrator	\nravi.jaiswal@digitalindia.gov.in\n 011-30481637', 'manager': '17', 'color': '#756570' },
+    { 'id': '152', 'role': 'Savita	\nExecutive Assistant (Receptionist)\nsavita.negd@digitalindia.gov.in\n 011-24303714', 'manager': '17', 'color': '#756570' },
+
+    
+
+];
+	  
+	  var items = new ej.data.DataManager(data);
+
+var diagram = new ej.diagrams.Diagram({
+    width: "100%",
+    height: "100%",
+    dataSourceSettings: {
+        // set the unique field from data source
+        id: 'id', 
+        // set the field which is used to identify the reporting person
+        parentId: 'manager', 
+        // define the employee data
+        dataManager: items,
+        doBinding: function (node, data) {
+            // You will get the employee information in data argument and bind that value directly to node's built-in properties.
+            node.annotations = [{ content: data.role }];
+            node.style = { fill: data.color };
+        }
+    },
+    layout: {
+        // set the layout type
+        type: 'OrganizationalChart' 
+    },
+    // set the common settings for node and connector
+    getNodeDefaults: nodeDefaults,
+    getConnectorDefaults: connectorDefaults,
+    // hide the gridlines in the diagram
+    snapSettings: { constraints: ej.diagrams.SnapConstraints.None }
+});
+diagram.appendTo('#diagram');
+
+function nodeDefaults(node) {
+    node.annotations[0].style.color = "white";
+    node.width = 200;
+	node.height = 150;
+	
+    return node;
+}
+
+function connectorDefaults(connector) {
+    connector.type = 'Orthogonal';
+    connector.targetDecorator = { shape: 'None' };
+    return connector;
+}
+	  </script>
+  </body>
+</html>
